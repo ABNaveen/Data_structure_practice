@@ -14,11 +14,11 @@ void print(char arr[],int size){
 }
 void permutation(char arr[],int n,int size){
     if(n>2){
-        int next = size-n;
-        for(int i=next;i<size;i++){
-                swap(&arr[i],&arr[next]);
+        int from = size-n;
+        for(int i=from;i<size;i++){
+                swap(&arr[from],&arr[i]);
                 permutation(arr,n-1,size);
-                swap(&arr[i],&arr[next]);
+                swap(&arr[i],&arr[from]);
             }
     }
     else{
